@@ -1,19 +1,74 @@
-# Determinants
+# Linear Algebra 1: Vector Spaces and Linear Transformations
 
-## tl;dr
+Linear algebra is the study of linear transformations on finite-dimensional
+vector spaces.
 
--   Everything needs to be handwavy and notional for now. It will become more
-    clear and precise later.  The process of learning math consists basically
-    of first getting enough rough context that you have a vague idea of what
-    things are, how they work, what things are true, etc, *then* going back and
-    writing down precise definitions and phrasing your knowledge rigorously.
--   Let's suppose we have some polygon in the plane:
+In math, the two primary categories of objects we study are **sets** and
+**functions**.
 
-    ![](./imgs/dets-planefig1.png)
+Vector spaces are a special subcategory of sets, and linear transformations are
+a special subcategory of functions.
 
-    We consider the edges of the polygon to have an orientation. This is
-    crucial.  For now just vaguely note that the polygon has a
-    ``counterclockwise'' orientation.
+Most branches of math are the study of some category of sets that have some
+structure we're interested in studying, and a complementary category of
+functions that play nice with the structure in question.
+
+In order to define vector spaces and linear transformations in a way where the
+terms make sense, you need some intuition about what sets and functions are,
+and some basic properties and terminology.
+
+A **set** is a special type of collection. If some object $x$ is in the set
+$X$, we say "$x$ is an element of $X$", and denote this with \[ x \in X \]. If
+$x$ is not an element of $X$, we write \[ x \notin X \].
+
+There is no further structure to a set as-such. A set only "knows" whether or
+not it contains some element. Specifically, sets do not have notions of
+multiplicity or order. So, all of the following are equal sets:
+
+\[ \{ 1,2,3,4 \} \]
+\[ \{ 4,2,1,3 \} \]
+\[ \{ 4,2,1,3,4,1 \} \]
+\[ \{ 4,2,1,3,4,1,3,2 \} \]
+
+Sets are used as a basic abstraction in math because primitive operations in
+logic play nice with the natural operations on sets.
+
+The primitive operations in logic are:
+
+1. `inclusive-or`
+2. `and`
+3. `not`
+
+We can write these as Erlang functions:
+
+```
+ior(false, false) -> false;
+ior(false, true)  -> true;
+ior(true,  false) -> true;
+ior(true,  true)  -> true.
+
+and(false, false) -> false;
+and(false, true)  -> false;
+and(true,  false) -> false;
+and(true,  true)  -> true.
+
+not(false) -> true;
+not(true)  -> false.
+```
+
+
+
+
+
+-   Linear algebra is the study of linear transformations on finite-dimensional
+    vector spaces.
+
+-   Generally, functions
+
+-   A special property of linear trans
+
+-   Let's suppose we have some polygon in the plane
+
 
 -   Suppose we have a **linear transformation** (what this means exactly will
     have to wait) $T$ which transforms our purple polygon into this blue
